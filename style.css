@@ -131,7 +131,6 @@ header ul li a:hover,
   display: flex;
   justify-content: center;
   align-items: center;
-  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -173,6 +172,176 @@ header ul li a:hover,
 #intro .drop ion-icon {
   font-size: 7em;
   color: #444;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .card {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#contact .card:hover {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.2);
+}
+#contact .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(650px);
+  transition: .5s;
+}
+#contact .card:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+#contact .card ul {
+  position: absolute;
+  bottom: 45px;
+  right: 10px;
+  display: flex;
+}
+#contact .card ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px;
+}
+#contact .card ul li a {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
+  top: 0;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  transition: top 0.5s, z-index 0s, transform 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s;
+  overflow: hidden;
+}
+#contact .card ul li a:hover {
+  transition-delay: 0s, 0.5s, 0.5s;
+  top: -30px;
+  transform: translateY(30px);
+  z-index: 11;
+  animation: icoHover 1s ease;
+}
+#contact .card ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: .5s;
+}
+#contact .card ul li a:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+#contact .card .school {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 20px;
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+}
+#contact .card .school .imgBx {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+#contact .card .school .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#contact .card .school .name .kr {
+  font-size: 1.4em;
+}
+#contact .card .school .name .en {
+  font-size: .95em;
+  font-weight: 600;
+}
+#contact .card .content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: -80px;
+  gap: 20px;
+}
+#contact .card .content .imgBx {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1);
+}
+#contact .card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#contact .card .content .details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #111;
+}
+#contact .card .content .details div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#contact .card .content .details h3 {
+  font-weight: 600;
+}
+#contact .card .content .details ion-icon {
+  font-size: 1.3em;
 }
 
 @media only screen and (max-width: 600px) {
