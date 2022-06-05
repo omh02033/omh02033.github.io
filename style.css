@@ -1,0 +1,158 @@
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url('./assets/fonts/Pretendard-Bold.woff2') format('woff2'), url('./assets/fonts/Pretendard-Bold.woff') format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard', sans-serif;
+}
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+  background: rgb(197, 196, 196);
+}
+#intro .container {
+  position: relative;
+  width: calc(100% - 100px);
+  min-height: calc(100vh - 280px);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+#intro header {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  left: 20px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+#intro header .logo {
+  color: #0e022ae3;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+}
+#intro header ul {
+  display: flex;
+}
+#intro header ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+#intro header ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #060228da;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 1.3em;
+}
+header ul li a:hover,
+#intro header ul li a.active {
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+#intro .content {
+  transform: translateX(-100px);
+  max-width: 800px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 80px 40px;
+  padding-left: 110px;
+}
+#intro .content h2 {
+  font-size: 3em;
+  color: #070430d3;
+  margin-bottom: 15px;
+}
+#intro .content p {
+  font-size: 1.2em;
+  color: #02011a91;
+}
+#intro .git {
+  text-decoration: none;
+  font-size: 8em;
+  transform: translateX(-50px);
+  color: #444;
+}
+#intro .mac {
+  width: 656px;
+  height: 424px;
+  background: linear-gradient(rgba(204, 208, 210, 0.8), rgba(163, 166, 168, 0.8));
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+#intro .mac .drop {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+  15px 25px 10px rgba(0, 0, 0, 0.05),
+  15px 20px 20px rgba(0, 0, 0, 0.05),
+  inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#intro .drop::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+}
+#intro .drop::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+}
+#intro .drop ion-icon {
+  font-size: 7em;
+  color: #444;
+}
