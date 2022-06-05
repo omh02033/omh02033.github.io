@@ -11,13 +11,22 @@
   box-sizing: border-box;
   font-family: 'Pretendard', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: rgb(197, 196, 196);
+}
+section {
+  width: 100vw;
+  height: 100vh;
+}
 #intro {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 50px;
-  background: rgb(197, 196, 196);
 }
 #intro .container {
   position: relative;
@@ -51,6 +60,14 @@
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  transition: left 0.5s ease, right 0.5s ease;;
+  z-index: 1000;
+}
+#intro header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 #intro header .logo {
   color: #0e022ae3;
@@ -72,6 +89,7 @@
   padding: 8px 15px;
   border-radius: 25px;
   font-size: 1.3em;
+  transition: .3s ease;
 }
 header ul li a:hover,
 #intro header ul li a.active {
@@ -155,4 +173,167 @@ header ul li a:hover,
 #intro .drop ion-icon {
   font-size: 7em;
   color: #444;
+}
+
+@media only screen and (max-width: 600px) {
+  #intro {
+    padding: 0px;
+    width: 100vw;
+  }
+  #intro .container {
+    width: 90%;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #intro header {
+    left: -5px;
+    right: -5px;
+    padding: 5px 10px;
+    top: 0;
+    transform: translateY(-100%);
+    overflow-x: auto;
+  }
+  #intro header.sticky {
+    transform: unset;
+    background: rgb(203, 201, 201);
+  }
+  #intro header .logo {
+    display: none;
+  }
+  #intro header ul {
+    justify-content: unset;
+    align-items: center;
+    height: 40px;
+  }
+  #intro header ul li a {
+    font-size: .7em;
+  }
+  #intro .content {
+    transform: unset;
+    padding: 10px;
+    width: 95%;
+  }
+  #intro .content h2 {
+    font-size: 1.5em;
+  }
+  #intro .content p {
+    font-size: 0.8em;
+  }
+  #intro .git {
+    display: none;
+  }
+  #intro .mac {
+    width: 200px;
+    height: 130px;
+  }
+  #intro .mac .drop {
+    width: 50px;
+    height: 50px;
+  }
+  #intro .drop::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  #intro .drop::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  #intro .drop ion-icon {
+    font-size: 2em;
+    color: #444;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  #intro {
+    padding: 0px;
+    width: 100vw;
+  }
+  #intro .container {
+    width: 90%;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #intro header {
+    left: -5px;
+    right: -5px;
+    padding: 5px 10px;
+    top: 0;
+    transform: translateY(-100%);
+    overflow-x: auto;
+  }
+  #intro header.sticky {
+    transform: unset;
+    background: rgb(203, 201, 201);
+  }
+  #intro header .logo {
+    display: none;
+  }
+  #intro header ul {
+    justify-content: unset;
+    align-items: center;
+    height: 40px;
+  }
+  #intro header ul li a {
+    font-size: .7em;
+  }
+  #intro .content {
+    transform: unset;
+    padding: 30px;
+    width: 90%;
+  }
+  #intro .content h2 {
+    font-size: 1.5em;
+  }
+  #intro .content p {
+    font-size: 0.8em;
+  }
+  #intro .git {
+    display: none;
+  }
+  #intro .mac {
+    width: 300px;
+    height: 200px;
+  }
+  #intro .mac .drop {
+    width: 70px;
+    height: 70px;
+  }
+  #intro .drop::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  #intro .drop::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  #intro .drop ion-icon {
+    font-size: 3em;
+    color: #444;
+  }
 }
