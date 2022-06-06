@@ -1,0 +1,77 @@
+#skill {
+  height: 150vh;
+}
+
+#skill .container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#skill .container > .title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+#skill .container .box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-around;
+}
+#skill .container .box .content {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  width: 17rem;
+  padding: 1rem;
+  margin: 20px;
+  transition: transform .2s ease;
+}
+#skill .container .box .content:hover {
+  transform: translateY(10px);
+}
+#skill .container .box .content .title {
+  margin: 0 12px 20px 12px;
+  color: rgba(0, 2, 34, 0.727);
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+#skill .container .box .content .skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+}
+#skill .container .box .content .skills img.large {
+  width: 80%;
+}
+#skill .container .box .content .skills img.small {
+  width: 45%;
+}
+#skill .container .box .content .skills img {
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #skill {
+    height: auto;
+  }
+  #skill .container {
+    height: auto;
+    width: 80%;
+  }
+  #skill .container .box .content {
+    width: 100%;
+  }
+}

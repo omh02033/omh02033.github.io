@@ -1,0 +1,181 @@
+#project {
+  height: auto;
+}
+#project .container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#project .container .title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#project .box {
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  width: 80%;
+  position: relative;
+  margin: 60px 0;
+}
+#project .box .title {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  padding: 15px;
+  position: absolute;
+  top: -35px;
+  left: 10px;
+}
+#project .box .title .main {
+  font-size: 1em;
+}
+#project .box .title .sub {
+  font-size: .8em;
+  font-weight: 500;
+  color: #000000aa;
+}
+#project .box .title .type {
+  font-size: .6em;
+  color: #00000033;
+}
+
+#project .box ul {
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  display: flex;
+}
+#project .box ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px;
+}
+#project .box ul li a {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 2em;
+  top: 0;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: top 0.3s;
+  overflow: hidden;
+}
+#project .box ul li a:hover {
+  top: -10px;
+}
+#project .box ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: .5s;
+}
+#project .box ul li a:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+
+#project .box .content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+#project .box .content img {
+  width: 45%;
+  border-radius: 10px;
+}
+#project .box .content .details {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 30px;
+}
+#project .box .content .details > span {
+  color: #00000088;
+}
+#project .box .content .details .detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#project .box .content .details .detail .name {
+  font-size: 1.2em;
+  font-weight: 700;
+  width: 30%;
+}
+#project .box .content .details .detail span {
+  width: 70%;
+  font-size: 1em;
+  font-weight: 500;
+}
+@media only screen and (max-width: 600px) {
+  #project .container {
+    width: 100%;
+  }
+  #project .box {
+    width: 90%;
+    margin: 30px 0;
+  }
+  #project .box .title {
+    padding: 0 10px 5px 10px;
+    top: -25px;
+  }
+  #project .box .title .sub {
+    font-size: .4em;
+  }
+  #project .box .title .main {
+    font-size: .6em;
+  }
+  #project .box .title .type {
+    display: none;
+  }
+  #project .box ul {
+    display: none;
+  }
+  #project .box .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  #project .box .content img {
+    width: 100%;
+  }
+  #project .box .content .details {
+    padding: 20px 0;
+  }
+  #project .box .content .details .detail {
+    flex-direction: column;
+  }
+  #project .box .content .details .detail .name,
+  #project .box .content .details .detail span {
+    width: 100%;
+  }
+}
