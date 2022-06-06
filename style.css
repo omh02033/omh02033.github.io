@@ -320,14 +320,20 @@ header ul li a:hover,
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
-  transition: top 0.5s, z-index 0s, transform 0.5s;
-  transition-delay: 0.5s, 0.5s, 0s;
+  transition: top 0.3s, z-index 0s, transform 0.3s;
+  transition-delay: 0.3s, 0.3s, 0s;
   overflow: hidden;
 }
+#contact .card ul li a.insta {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec56433, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec56433, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf33, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf33, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc233, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc233, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a33, transparent), linear-gradient(#6559ca33, #bc318f33 30%, #e33f5f33 50%, #f7763833 70%, #fec66d33 100%);
+}
+#contact .card ul li a.github {
+  background: rgba(29, 31, 35, 0.3);
+}
 #contact .card ul li a:hover {
-  transition-delay: 0s, 0.5s, 0.5s;
+  transition-delay: 0s, 0.3s, 0.3s;
   top: -30px;
-  transform: translateY(30px);
+  transform: translateY(25px);
   z-index: 11;
   animation: icoHover 1s ease;
 }
