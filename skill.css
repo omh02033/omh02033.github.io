@@ -75,3 +75,16 @@
     width: 100%;
   }
 }
+
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  #skill {
+    height: auto;
+  }
+  #skill .container {
+    height: auto;
+    width: 50%;
+  }
+  #skill .container .box .content {
+    width: 100%;
+  }
+}
