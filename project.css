@@ -25,6 +25,37 @@
   width: 80%;
   position: relative;
   margin: 60px 0;
+  transition: opacity .5s;
+  visibility: visible;
+}
+#project .box.stealth {
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  visibility: hidden;
+  margin: 0;
+}
+#project .box.show {
+  opacity: 1;
+  visibility: visible;
+}
+#project .container .readMore {
+  padding: 15px 20px;
+  border-radius: 25px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#project .container .readMore:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#project .container .readMore.hidden {
+  display: none;
 }
 #project .box .title {
   background: rgba(255, 255, 255, 0.2);
