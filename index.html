@@ -266,11 +266,6 @@
         </div>
       </div>
 
-      <div class="readMore" onclick="projectMore();">
-        1 Read More
-      </div>
-
-      <!-- <div class="box stealth"> -->
       <div class="box stealth">
         <div class="title">
           <span class="main">DeliTracking</span>
@@ -299,6 +294,10 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="readMore" onclick="projectMore();">
+        0 Read More
       </div>
     </div>
   </section>
@@ -373,6 +372,11 @@
         i.classList.add("show");
       }
       $('.readMore').addClass("hidden");
+    }
+
+    onload = () => {
+      const stealthProject = document.querySelectorAll('.stealth');
+      document.querySelector('.readMore').innerHTML = `${stealthProject.length} Read More`
     }
   </script>
 </body>
