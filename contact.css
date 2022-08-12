@@ -79,6 +79,9 @@
 #contact .card ul li a.github {
   background: rgba(29, 31, 35, 0.3);
 }
+#contact .card ul li a.notion {
+  background: rgba(255, 255, 255, 0.3);
+}
 #contact .card ul li a:hover {
   transition-delay: 0s, 0.3s, 0.3s;
   top: -30px;
